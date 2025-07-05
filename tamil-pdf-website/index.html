@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tamil PDF Library</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCz4FJZkyykx50RE0_i8yNEc9lOszxjlHI",
+      authDomain: "tamilpdflibrary.firebaseapp.com",
+      projectId: "tamilpdflibrary",
+      storageBucket: "tamilpdflibrary.appspot.com",
+      messagingSenderId: "730424795503",
+      appId: "1:730424795503:web:12fec7c518129ec145889a",
+      measurementId: "G-2DTDBLXCJH"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#category">Category</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="auth">
+      <button id="loginBtn">Sign in with Google</button>
+      <span id="userName"></span>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h1>தமிழ் இலக்கிய நூலகம்</h1>
+      <p>Explore 1000+ Tamil and English PDFs of poems, literature, and more.</p>
+      <a href="#category" class="btn">Browse Categories</a>
+    </div>
+  </header>
+
+  <!-- Category Section -->
+  <section id="category" class="category-section">
+    <h2>Explore by Category</h2>
+    <div class="category-grid">
+      <div class="category-card">Poems</div>
+      <div class="category-card">Literature</div>
+      <div class="category-card">Thirukkural</div>
+      <div class="category-card">History</div>
+      <div class="category-card">Tamil Grammar</div>
+      <div class="category-card">English Translations</div>
+    </div>
+  </section>
+
+  <!-- PDF List Section -->
+  <section id="pdf-list" class="pdf-list-section" style="display: none;">
+    <h2 id="pdf-title">Category PDFs</h2>
+    <div class="pdf-grid" id="pdf-grid">
+      <!-- Loaded dynamically -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Email: tamilpdf@example.com</p>
+    <p>Instagram: @tamilpdf</p>
+  </section>
+
+  <!-- Your JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
